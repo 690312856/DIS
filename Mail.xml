@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Mail>
+  <MailBox>dis17932486@gmail.com</MailBox>
+  <SMTP>smtp.gmail.com</SMTP>
+  <Port>25</Port>
+  <Name>dis17932486@gmail.com</Name>
+  <Password>17932486</Password>
+  <SSL>true</SSL>
+</Mail>

@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UserConsole.master.cs" Inherits="Master_UserConsole" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equtv="Pragma" content="no-cache">
+    <meta http-equtv="Cache-Control" content="no-cache">
+    <meta http-equtv="Expires" content="0">
+    <title>数字创新加油站</title>
+    <link href="../css/admin-global.css" type="text/css" rel="Stylesheet" />
+    <script type="text/javascript" src="../js/jquery-1.5.1.js"></script>
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+        <div id="head">
+    
+        <div id="headbar">
+
+            <div  style="float:left" id="headbar_logo" onclick="location.href='<%= ResolveUrl("~/User/UserProjectManagement.aspx") %>'">
+     <div  style="position:absolute; right:450px; top:60px">
+<asp:HyperLink ID="Information" runat="server" NavigateUrl="~/User/Information.aspx" 
+             Height="16px" ForeColor="White">[Information]</asp:HyperLink>
+     </div>
+            </div>
+            
+           
+            <div id="headbar_toolbar">
+            
+                <table border="0" cellspacing="0" cellpadding="0">
+                
+                    <tr>
+                        <td>
+                            <a id="headbar_toolbar_index" href="<%= ResolveUrl("~/User/UserProjectManagement.aspx") %>">
+                                <div class="text">
+                                    首页</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a id="headbar_toolbar_user" href="<%= ResolveUrl("~/User/Information.aspx") %>">
+                                <div class="text">
+                                    账户</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a id="headbar_toolbar_help" href="#">
+                                <div class="text">
+                                    帮助</div>
+                            </a>
+                        </td>
+                        <td>
+                            <a id="headbar_toolbar_logout" href="<%= ResolveUrl("~/Account/Logout.aspx") %>">
+                                <div class="text">
+                                    退出</div>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="bg-top">
+    </div>
+    <div id="newseditor-container">
+        <form id="form1" runat="server">
+        <div id="sidebar" style="top:0px;">
+            <div id="sidebar-list">
+                <h3>
+                    个人项目管理</h3>
+                <ul id="sidebar-content">
+
+                    <li>
+                        <span class="level1"><a id="siderbar_about" href="UserProjectManagement.aspx">我的项目</a></span>
+                    </li>
+
+                    <li>
+                        <span class="level1"><a id="siderbar_project" href="PublicResource.aspx">公共资源</a></span>
+                    </li>
+                   </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $('.present').removeAttr("href");
+        </script>
+        <div id="news-editor">
+            <div id="content">
+                <div id="content_in">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>
